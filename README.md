@@ -11,3 +11,5 @@ We'll see as we go.
 jest had a --watch mode but vitest seems to do that by default and with HMR
 
 Talk about basic async situations
+
+Right here ---- it would be good to go into as much exploration of the core vitest methods before adding other libraries ---
