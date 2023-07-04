@@ -1,8 +1,12 @@
 import { describe, test, expect } from 'vitest';
+import { mount } from '@vue/test-utils';
 
-describe('AuthorizedStatus', function () {
+import AuthorizedStatus from '../AuthorizedStatus.vue';
+
+describe('AuthorizedStatus.vue', function () {
   test('renders component', function () {
-    // but how to "mount" it...
-    expect(true).toBe(true);
+    const wrapper = mount(AuthorizedStatus);
+    const p = wrapper.get('p');
+    expect(p.text()).toBe('Hello');
   });
 });
