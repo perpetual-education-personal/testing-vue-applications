@@ -16,5 +16,6 @@ describe('AuthorizedStatus.vue', function () {
       },
     });
     expect(wrapper.text()).toContain('Yes');
+    // note this didn't need the exact <p> selector/parent
   });
 });

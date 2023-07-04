@@ -1,14 +1,14 @@
 <script setup>
 defineProps({
-  theContent: {
-    type: String,
-    default: 'Default content',
+  authorized: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>
 
 <template>
   <div>
-    <p>{{ theContent }}</p>
+    <p>{{ authorized ? 'Yes' : 'No' }}</p>
   </div>
 </template>
