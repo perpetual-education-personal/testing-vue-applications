@@ -18,34 +18,20 @@ const thingsData = [
   },
 ];
 
-describe('ListOfThings.vue', function () {
-  // is there a reason to ever check for "can mount" etc? if these other tests inherently cover that?
+describe('ListOfThings.vue with items', function () {
+  const wrapper = shallowMount(ListOfThings, {
+    props: {
+      things: thingsData,
+    },
+  });
 
   test('list length', function () {
-    const wrapper = shallowMount(ListOfThings, {
-      props: {
-        things: thingsData,
-      },
-    });
-
     const items = wrapper.findAll('li');
     expect(items.length).toBe(thingsData.length);
-    // feels a little blind! How do you know if your test is written properly...
-    // also if there's no template in the component... that is a show stopper...
-    // but it does say expected 3 recieved 0 ...
   });
 
   test('item has correct name', function () {
-    const wrapper = shallowMount(ListOfThings, {
-      props: {
-        things: thingsData,
-      },
-    });
-
     const item = wrapper.find('li:nth-of-type(2)');
-    expect(item.text()).toContain('Ivy');
-    // or thingsData[1].name ?
-    // Cannot call Symbol(Symbol.toStringTag) on an empty DOMWrapper. hmmmm
-    // this was because it can't check contains on the wrapper... gotta get the text...
+    expect(item.text()).toContain(thingsData[1].name);
   });
 });
