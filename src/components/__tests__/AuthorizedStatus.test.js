@@ -4,18 +4,26 @@ import { shallowMount } from '@vue/test-utils';
 import AuthorizedStatus from '../AuthorizedStatus.vue';
 
 describe('AuthorizedStatus.vue', function () {
-  test('authorized', function () {
+  test('authorized text', function () {
     const wrapper = shallowMount(AuthorizedStatus);
     expect(wrapper.text()).toContain('No');
   });
 
-  test('unauthorized', function () {
+  test('unauthorized text', function () {
     const wrapper = shallowMount(AuthorizedStatus, {
       props: {
         authorized: true,
       },
     });
     expect(wrapper.text()).toContain('Yes');
-    // note this didn't need the exact <p> selector/parent
+  });
+
+  test('authorized class', function () {
+    const wrapper = shallowMount(AuthorizedStatus, {
+      props: {
+        authorized: true,
+      },
+    });
+    expect(wrapper.classes()).toContain('active');
   });
 });
