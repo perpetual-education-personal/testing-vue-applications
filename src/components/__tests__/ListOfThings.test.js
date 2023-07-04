@@ -43,8 +43,9 @@ describe('ListOfThings.vue', function () {
     });
 
     const item = wrapper.find('li:nth-of-type(2)');
-    expect(item).toContain('Ivy');
+    expect(item.text()).toContain('Ivy');
     // or thingsData[1].name ?
     // Cannot call Symbol(Symbol.toStringTag) on an empty DOMWrapper. hmmmm
+    // this was because it can't check contains on the wrapper... gotta get the text...
   });
 });
