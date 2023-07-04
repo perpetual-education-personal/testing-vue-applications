@@ -7,3 +7,5 @@ We're following along with the book _Testing Vue.js Applications_ from 2018. The
 - ? --> ?
 
 We'll see as we go.
+
+jest had a --watch mode but vitest seems to do that by default and with HMR
