@@ -4,21 +4,17 @@ import { shallowMount } from '@vue/test-utils';
 import AuthorizedStatus from '../AuthorizedStatus.vue';
 
 describe('AuthorizedStatus.vue', function () {
-  test('Custom content works', function () {
+  test('authorized', function () {
+    const wrapper = shallowMount(AuthorizedStatus);
+    expect(wrapper.text()).toContain('No');
+  });
+
+  test('unauthorized', function () {
     const wrapper = shallowMount(AuthorizedStatus, {
       props: {
-        theContent: 'My Content',
+        authorized: true,
       },
     });
-    const p = wrapper.get('p');
-    expect(p.text()).toContain('My Content');
-  });
-
-  test('Default content works', function () {
-    const wrapper = shallowMount(AuthorizedStatus);
-    const p = wrapper.get('p');
-    expect(p.text()).toContain('Default content');
+    expect(wrapper.text()).toContain('Yes');
   });
 });
-
-// note that you can additionally check prop values using validators and other built-in Vue ways
