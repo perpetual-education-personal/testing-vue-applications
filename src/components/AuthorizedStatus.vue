@@ -1,7 +1,14 @@
-<script setup></script>
+<script setup>
+defineProps({
+  theContent: {
+    type: String,
+    default: 'Default content',
+  },
+});
+</script>
 
 <template>
   <div>
-    <p>Hello</p>
+    <p>{{ theContent }}</p>
   </div>
 </template>
