@@ -1,13 +1,21 @@
 import { test, expect } from 'vitest';
 
-function double(number) {
-  return number * 2;
+function doubleAsync(number) {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve(number * 2);
+    }, 2000);
+  });
 }
 
-test('sanity test', () => {
-  expect(double(2)).toBe(4);
+test('sanity test', async () => {
+  expect(await doubleAsync(2)).toBe(4);
+});
+// not sure if this is the _right_ way to do this... but for an example
+// (and before adding any other libraries)
+
+test('sanity test', async () => {
+  expect(await doubleAsync(2)).toBe(5);
 });
 
-test('sanity test 2', () => {
-  expect(double(2)).toBe(5); // set to 5 or something to see it fail
-});
+// seems like these should run concurrently/in-parallel or something
