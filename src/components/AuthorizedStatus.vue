@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <div>
+  <div :class="{ active: authorized }">
     <p>{{ authorized ? 'Yes' : 'No' }}</p>
   </div>
 </template>
