@@ -1,9 +1,8 @@
 <script setup>
-defineProps(['things']);
+defineProps(["things"]);
 </script>
 
 <template>
-  <ul>
   <ul class="list-of-things">
     <li v-for="thing in things">
       {{ thing.name }}

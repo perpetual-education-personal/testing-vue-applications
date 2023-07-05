@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="authorized-status" :class="{ active: authorized }">
-    <p>{{ authorized ? 'Yes' : 'No' }}</p>
+    <p>{{ authorized ? "Yes" : "No" }}</p>
   </div>
 </template>
 
