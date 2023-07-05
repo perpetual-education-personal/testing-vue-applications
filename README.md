@@ -33,4 +33,4 @@ mounting components. helper functions and methods. `mount(component)` (gets you 
 
 ...
 
-Current page in the book:
+Current page in the book: 59
