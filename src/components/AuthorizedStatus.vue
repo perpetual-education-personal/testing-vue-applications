@@ -15,6 +15,8 @@ defineProps({
 
 <style>
 .authorized-status {
+  border: 1px solid gray;
+  padding: 10px;
   color: red;
 }
 .authorized-status.active {
