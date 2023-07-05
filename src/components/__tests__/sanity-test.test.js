@@ -1,4 +1,4 @@
-import { describe, test, expect } from 'vitest';
+import { describe, test, expect } from "vitest";
 
 function double(number) {
   return number * 2;
@@ -12,12 +12,12 @@ function double(number) {
 //   });
 // }
 
-describe('sanity-check', function () {
+describe("sanity-check", function () {
   // test('test description 2', async () => {
   //   expect(await doubleAsync(2)).toBe(4);
   // });
 
-  test('test a', async () => {
+  test("test a", async () => {
     expect(double(2)).not.toBe(5); // 4
   });
   // silly example... but we'll use a better one
