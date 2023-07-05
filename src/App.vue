@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import ProgressBar from "@/components/ProgressBar.vue";
 import ItemList from "@/components/ItemList.vue";
 
 const itemsData = ref([
@@ -21,6 +22,8 @@ const itemsData = ref([
 
 <template>
   <div class="app">
+    <ProgressBar />
+
     <ItemList :items="itemsData" />
   </div>
 </template>
