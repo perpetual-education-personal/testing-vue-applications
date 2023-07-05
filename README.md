@@ -18,14 +18,19 @@ Work out something loose here to chop up and scoot around later
 
 Basic examples
 
+`expects(something).toBe(something)`
+`expects(something.text()).toContain("string")`
+
 Talk about basic async situations
 
 Right here ---- it would be good to go into as much exploration of the core vitest methods before adding other libraries ---
 
 ## Why would you want to add in `@vue/test-utils`?
 
-mounting components. helper functions and methods.
+mounting components. helper functions and methods. `mount(component)` (gets you that "wrapper") `text()` `find(selector)` `findAll(selector)` `attributes()`
 
 ## Why would you want to add in `testing-library`?
 
 ...
+
+Current page in the book:

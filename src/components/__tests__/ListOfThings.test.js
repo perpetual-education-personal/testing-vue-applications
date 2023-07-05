@@ -34,4 +34,8 @@ describe("ListOfThings.vue with items", function () {
     const item = wrapper.find("li:nth-of-type(2)");
     expect(item.text()).toContain(thingsData[1].name);
   });
+
+  test("example inline-style check", function () {
+    expect(wrapper.element.style.color).toBe("purple");
+  });
 });

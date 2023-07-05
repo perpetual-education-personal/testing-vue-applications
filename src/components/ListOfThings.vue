@@ -3,7 +3,7 @@ defineProps(["things"]);
 </script>
 
 <template>
-  <ul class="list-of-things">
+  <ul class="list-of-things" style="color: purple">
     <li v-for="thing in things">
       {{ thing.name }}
     </li>
