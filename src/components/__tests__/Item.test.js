@@ -17,6 +17,8 @@ describe("Item.vue", () => {
 		});
 		const a = wrapper.find("a");
 		expect(a.text()).toBe(itemData.title);
+		console.log(a.attributes().href, itemData.href);
+		// this is correct / the the real data is not !!!
 		expect(a.attributes().href).toBe(itemData.href);
 	});
 });
