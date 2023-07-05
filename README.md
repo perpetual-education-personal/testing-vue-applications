@@ -27,7 +27,7 @@ Right here ---- it would be good to go into as much exploration of the core vite
 
 ## Why would you want to add in `@vue/test-utils`?
 
-mounting components. helper functions and methods. `mount(component)` (gets you that "wrapper") `text()` `find(selector)` `findAll(selector)` `attributes()`
+mounting components. helper functions and methods. `mount(component)` `shallowMount()` (gets you that "wrapper") `text()` `find(selector)` `findAll(selector)` `attributes()`
 
 ## Why would you want to add in `testing-library`?
 

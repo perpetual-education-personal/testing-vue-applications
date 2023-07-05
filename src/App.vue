@@ -1,32 +1,26 @@
 <script setup>
 import { ref } from "vue";
-import AuthorizedStatus from "@/components/AuthorizedStatus.vue";
-import ListOfThings from "@/components/ListOfThings.vue";
+import ItemList from "@/components/ItemList.vue";
 
-const thingsData = ref([
+const itemsData = ref([
   {
-    id: 1,
-    name: "Derek",
+    title: "test",
+    hrem: "Derek",
   },
   {
-    id: 2,
-    name: "Ivy",
+    title: 2,
+    hrem: "Ivy",
   },
   {
-    id: 3,
-    name: "Valentine",
+    title: 3,
+    hrem: "Valentine",
   },
 ]);
 </script>
 
 <template>
   <div class="app">
-    <AuthorizedStatus />
-    <AuthorizedStatus authorized="true" />
-
-    <ListOfThings />
-
-    <ListOfThings :things="thingsData" />
+    <ItemList :items="itemsData" />
   </div>
 </template>
 
