@@ -5,15 +5,15 @@ import ItemList from "@/components/ItemList.vue";
 const itemsData = ref([
   {
     title: "test",
-    hrem: "Derek",
+    href: "Derek",
   },
   {
     title: 2,
-    hrem: "Ivy",
+    href: "Ivy",
   },
   {
     title: 3,
-    hrem: "Valentine",
+    href: "Valentine",
   },
 ]);
 </script>
