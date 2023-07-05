@@ -4,16 +4,17 @@ import ItemList from "@/components/ItemList.vue";
 
 const itemsData = ref([
   {
-    title: "test",
-    href: "Derek",
+    title: "Amazing new design agency",
+    href: "https://reputable.agency",
   },
   {
-    title: 2,
-    href: "Ivy",
+    title: "Important news!",
+    href: "https://sheriffderek.consulting",
   },
   {
-    title: 3,
-    href: "Valentine",
+    title:
+      "Radical web development school. Can you make it through withouth crying?",
+    href: "https://perpetual.education",
   },
 ]);
 </script>

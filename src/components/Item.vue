@@ -4,7 +4,9 @@ defineProps(["item"]);
 
 <template>
 	<div class="item-card">
-		<a :href="item.href">{{ item.title }}</a>
+		<a :href="item.href" :target="item.title">
+			{{ item.title }}
+		</a>
 	</div>
 </template>
 
